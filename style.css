@@ -105,6 +105,17 @@ body {
     text-shadow: 0 0 6px rgba(94, 234, 212, 0.3);
 }
 
+/* Botón Hamburguesa */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+}
+
 .nav-btn {
     display: flex;
     align-items: center;
@@ -598,7 +609,7 @@ body {
     text-decoration: none;
 }
 
-/* --- ESTRUCTURA DE MODAL CORREGIDA --- */
+/* --- ESTRUCTURA DE MODAL CENTRADO --- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -611,7 +622,7 @@ body {
     z-index: 2000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Centrado vertical en la pantalla */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -627,9 +638,9 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 24px;
-    max-width: 650px;
+    max-width: 600px;
     width: 100%;
-    max-height: 85vh;
+    max-height: 90vh;
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     transform: translateY(20px);
@@ -667,7 +678,6 @@ body {
     transform: scale(1.1);
 }
 
-/* El contenido completo pasa a ser scrolleable sin ocultar el banner */
 #modal-content {
     width: 100%;
     overflow-y: auto;
@@ -677,8 +687,8 @@ body {
 
 .modal-banner {
     width: 100%;
-    height: 220px;
-    min-height: 220px;
+    height: 200px;
+    min-height: 200px;
     position: relative;
     background: var(--bg-alt);
 }
@@ -690,19 +700,34 @@ body {
     display: block;
 }
 
+/* Centrado total del contenido del modal */
 .modal-body-wrapper {
-    padding: 1.8rem 2rem 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los bloques */
+    text-align: center;   /* Centra los textos */
 }
 
 .modal-header {
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal-header h3 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     color: var(--text-dark);
     margin-top: 0.5rem;
     line-height: 1.25;
+}
+
+.modal-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal-body p {
@@ -710,23 +735,25 @@ body {
     line-height: 1.6;
     margin-bottom: 1.2rem;
     font-size: 1rem;
+    max-width: 500px;
 }
 
 .modal-metrics {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     background: var(--bg-alt);
     padding: 1.2rem 1rem;
     border-radius: 14px;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .metric-box strong {
     display: block;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--primary-green);
     margin-bottom: 0.2rem;
 }
@@ -741,7 +768,7 @@ body {
 
 .tech-title {
     display: block;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     color: var(--text-dark);
     font-size: 0.95rem;
 }
@@ -750,6 +777,7 @@ body {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
+    justify-content: center; /* Centra las etiquetas de stack */
     margin-top: 0.6rem;
 }
 
@@ -793,7 +821,7 @@ body {
     opacity: 0.7;
 }
 
-/* --- RESPONSIVO --- */
+/* --- RESPONSIVO PARA TABLETS Y MÓVILES --- */
 @media (max-width: 968px) {
     .about-card {
         grid-template-columns: 1fr;
@@ -814,28 +842,48 @@ body {
     }
 }
 
-/* --- ADAPTACIÓN RESPONSIVA PARA SMARTPHONES --- */
-@media (max-width: 600px) {
-    .navbar {
-        padding: 0.6rem 3%;
-        gap: 0.3rem;
-    }
-
-    .logo {
-        font-size: 1.15rem;
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
     }
 
     .nav-links {
-        gap: 0.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(11, 19, 43, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        gap: 1.2rem;
+        border-bottom: 1px solid rgba(45, 212, 191, 0.2);
+        display: none;
     }
 
-    .nav-links a {
-        font-size: 0.78rem;
+    .nav-links.active {
+        display: flex;
     }
 
-    .theme-toggle-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 0.95rem;
+    .hero {
+        padding: 8rem 5% 4rem;
+        clip-path: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-graphics {
+        display: none;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 0;
+        padding: 1.5rem;
     }
 }
