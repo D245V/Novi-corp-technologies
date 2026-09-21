@@ -31,6 +31,23 @@ themeToggleBtn.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
 });
 
+/* --- MENÚ DESPLEGABLE MÓVIL (HAMBURGUESA) --- */
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Cerrar el menú al pulsar sobre cualquier enlace
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
 /* --- DATOS Y LÓGICA DEL MODAL --- */
 const projectData = {
     heliosgrid: {
@@ -83,7 +100,7 @@ const projectData = {
     },
     biosensor: {
         tag: "Agrotech Sostenible",
-        title: "BioSensor Water: Riego por Capilaridad Guiado por IA",
+        title: "BioSensor Water Precision",
         image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=1000&q=80",
         description: "Red de mallas de sensores de humedad de suelo que optimizan el riego agrícola inteligente reduciendo la huella hídrica.",
         metrics: [
@@ -156,14 +173,16 @@ interactiveCards.forEach(card => {
     });
 });
 
-modalCloseBtn.addEventListener('click', () => {
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-});
-
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
+if (modalCloseBtn && modal) {
+    modalCloseBtn.addEventListener('click', () => {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
-    }
-});
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+    });
+}
