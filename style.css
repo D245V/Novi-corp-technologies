@@ -813,3 +813,29 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- ADAPTACIÓN RESPONSIVA PARA SMARTPHONES --- */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0.6rem 3%;
+        gap: 0.3rem;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.78rem;
+    }
+
+    .theme-toggle-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+    }
+}
