@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novi Corp | Innovación & Tecnologías Sostenibles</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navegación Fija -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🌿 Novi<span>Corp</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Empresa</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="nav-btn">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Tecnología que <br><span>Regenera el Planeta</span></h1>
+                <p>En Novi Corp desarrollamos e impulsamos soluciones tecnológicas avanzadas para acelerar la transición hacia un futuro verdaderamente sostenible.</p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">Explorar Innovaciones</a>
+                    <a href="#tecnologias" class="btn btn-outline">Nuestras Áreas</a>
+                </div>
+            </div>
+            
+            <div class="hero-graphics">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                
+                <!-- Símbolo Tecnológico Ecológico SVG -->
+                <div class="hero-symbol-wrapper">
+                    <svg class="hero-symbol-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="techGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#5eead4" />
+                                <stop offset="50%" stop-color="#2dd4bf" />
+                                <stop offset="100%" stop-color="#0f766e" />
+                            </linearGradient>
+                            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2dd4bf" flood-opacity="0.6"/>
+                            </filter>
+                        </defs>
+                        
+                        <circle cx="100" cy="100" r="82" stroke="url(#techGreenGrad)" stroke-width="3" stroke-dasharray="12 8" opacity="0.7"/>
+                        <circle cx="100" cy="100" r="70" stroke="#5eead4" stroke-width="1.5" opacity="0.4"/>
+                        
+                        <g filter="url(#glow)">
+                            <path d="M100 35C100 35 145 65 145 110C145 134.853 124.853 155 100 155C75.1472 155 55 134.853 55 110C55 65 100 35 100 35Z" fill="url(#techGreenGrad)" />
+                            <path d="M100 150V80M100 110L120 95M100 125L80 110" stroke="#042f2e" stroke-width="4" stroke-linecap="round"/>
+                        </g>
+                        
+                        <circle cx="120" cy="95" r="4" fill="#5eead4"/>
+                        <circle cx="80" cy="110" r="4" fill="#5eead4"/>
+                        <circle cx="100" cy="80" r="5" fill="#ffffff"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Estadísticas -->
+    <section id="impacto" class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Energía Renovables</p>
+            </div>
+            <div class="stat-item">
+                <h3>-85%</h3>
+                <p>Reducción de Huella Carbono</p>
+            </div>
+            <div class="stat-item">
+                <h3>20+</h3>
+                <p>Soluciones Eco-Digitales</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SOBRE LA EMPRESA -->
+    <section id="nosotros" class="section-container about-section">
+        <div class="about-card">
+            <div class="about-content">
+                <span class="about-badge">Nuestra Esencia</span>
+                <h2>Transformando ideas en <br><span>Soluciones Sostenibles</span></h2>
+                
+                <p>Novi Corp nació con la visión de unificar la tecnología de vanguardia y la responsabilidad ambiental. Somos un equipo multidisciplinario de ingenieros, científicos de datos y apasionados por el planeta.</p>
+                
+                <p>Trabajamos en un entorno colaborativo e innovador donde cada proyecto busca generar un impacto positivo medible en la reducción de la huella de carbono y optimización de recursos.</p>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">💡</div>
+                        <div>
+                            <strong>Innovación Abierta</strong>
+                            <span>Proyectos iterativos orientados a resultados.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-item">
+                        <div class="highlight-icon">🌱</div>
+                        <div>
+                            <strong>Talento Diverso</strong>
+                            <span>Especialistas comprometidos con la ecología.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image-container">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Equipo Novi Corp" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILARES DE TECNOLOGÍAS VERDES -->
+    <section id="tecnologias" class="section-container bg-alt">
+        <div class="section-title">
+            <h2>Nuestros Pilares de <span>Innovación</span></h2>
+            <p>Tecnologías clave diseñadas para mitigar el impacto ambiental y optimizar recursos.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="info-card interactive-card" data-project="heliosgrid">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80" alt="Energías Limpias & Smart Grids" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3>Energías Limpias & Smart Grids</h3>
+                    <p>Sistemas inteligentes para la gestión, almacenamiento y distribución eficiente de energía solar y eólica mediante algoritmos predictivos.</p>
+                    <span class="card-action">Explorar métricas &rarr;</span>
+                </div>
+            </div>
+
+            <div class="info-card interactive-card" data-project="amazonia">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Carbon Capture Digital Tracking" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3>Carbon Capture Digital Tracking</h3>
+                    <p>Monitoreo en tiempo real con sensores IoT y blockchain para medir la captura de carbono y certificar créditos verdes transparentes.</p>
+                    <span class="card-action">Explorar métricas &rarr;</span>
+                </div>
+            </div>
+
+            <div class="info-card interactive-card" data-project="codeclean">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Green Software & Cloud" class="card-img">
+                </div>
+                <div class="card-body">
+                    <h3>Green Software & Cloud</h3>
+                    <p>Arquitecturas web y algoritmos optimizados de bajo consumo energético que reducen el gasto eléctrico de los servidores informáticos.</p>
+                    <span class="card-action">Explorar métricas &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section id="proyectos" class="section-container">
+        <div class="section-title">
+            <h2>Proyectos <span>Destacados</span></h2>
+            <p>Casos reales de impacto tecnológico aplicado al medio ambiente.</p>
+        </div>
+
+        <div class="cards-grid">
+            <article class="project-card interactive-card" data-project="ecogrid">
+                <div class="project-tag">Smart City</div>
+                <h3>EcoGrid OS v4.2</h3>
+                <p>Plataforma de IA distribuida instalada en 14 parques industriales para optimizar el consumo de HVAC y climatización.</p>
+                <span class="project-link">Explorar métricas &rarr;</span>
+            </article>
+
+            <article class="project-card interactive-card" data-project="biosensor">
+                <div class="project-tag">IoT & Agrotech</div>
+                <h3>BioSensor Water Precision</h3>
+                <p>Red de mallas de sensores de humedad de suelo que optimizan el riego agrícola inteligente reduciendo la huella hídrica.</p>
+                <span class="project-link">Explorar métricas &rarr;</span>
+            </article>
+
+            <article class="project-card interactive-card" data-project="lowcarbon">
+                <div class="project-tag">Clean Computing</div>
+                <h3>LowCarbon Cloud Router</h3>
+                <p>Enrutador de microservicios que desplaza cargas pesadas de cómputo hacia regiones con exceso de energía limpia instantánea.</p>
+                <span class="project-link">Explorar métricas &rarr;</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- Modal Emergente -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-container">
+            <button id="modal-close" class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="footer-section">
+        <div class="footer-content">
+            <h2>Construyamos el futuro <span>juntos</span></h2>
+            <p>¿Tienes un proyecto en mente o quieres implementar soluciones de innovación tecnológica en tu organización?</p>
+            <a href="mailto:contacto@novicorp.com" class="btn btn-primary">Iniciar Conversación</a>
+            <p class="copy">&copy; 2026 Novi Corp. Todos los derechos reservados. Innovación Ecológica.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
